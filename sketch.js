@@ -53,8 +53,8 @@ function draw() {
   ground.display();
 
   //create particle objects
-  if (frameCount % 20 == 0){
-    particles.push(new Particle(random(width/2-30,width/2+30),10,10))
+  if (frameCount % 25 == 0){
+    particles.push(new Particle(random(width/2-50,width/2+50),10,10))
   }
 
   //display the plinkos 
