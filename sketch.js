@@ -41,12 +41,10 @@ function setup() {
   }
 
   //create particle objects
-  if (frameCount % 60 == 0){
-    particles.push(new Particle(random(20, 460)))
-  }
+  if (frameCount % 1 == 0){
+    particles.push(new Particle(random(width/2-30,width/2+30),10,10))
+    }
 }
- 
-
 
 function draw() {
   background("black");
