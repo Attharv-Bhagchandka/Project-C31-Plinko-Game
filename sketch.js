@@ -8,6 +8,7 @@ var plinkos = [];
 var divisions =[];
 var divisionHeight=300;
 var score =0;
+var edges;
 
 function setup() {
   createCanvas(480, 800);
@@ -40,19 +41,22 @@ function setup() {
     plinkos.push(new Plinko(j,375));
   }
 
-  //create particle objects
-  if (frameCount % 1 == 0){
-    particles.push(new Particle(random(width/2-30,width/2+30),10,10))
-    }
+  
 }
 
 function draw() {
+  //edges = createEdgeSprites();
   background("black");
   textSize(20)
  
   Engine.update(engine);
   ground.display();
-  
+
+  //create particle objects
+  if (frameCount % 20 == 0){
+    particles.push(new Particle(random(width/2-30,width/2+30),10,10))
+  }
+
   //display the plinkos 
   for (var i = 0; i < plinkos.length; i++) {
     plinkos[i].display();   
